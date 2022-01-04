@@ -1,7 +1,7 @@
-import * as React from "react";
-import QRCode from "qrcode.react";
+import * as React from "react"
+import QRCode from "qrcode.react"
 
-const icon = require("../../static/assets/images/zelogo.png");
+const icon = require("../../static/assets/images/zeLogo.png");
 
 export default function QrCode() {
   const qrRef = React.useRef();

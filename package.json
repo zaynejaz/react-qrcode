@@ -3,11 +3,10 @@
   "version": "1.0.0",
   "description": "Basic skeleton codebase for React applications that use TypeScript.",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
     "preinstall": "npm set audit false",
     "start": "webpack-dev-server --config webpack/dev.config.js --watch",
     "build": "cross-env NODE_ENV=production webpack --config webpack/prod.config.js --progress --display-error-details --color",
+    "heroku-postbuild": "npm run build",
     "precommit": "eslint src",
     "prod": "NODE_ENV=production node server.js"
   },
@@ -87,7 +86,6 @@
     "babel-preset-react": "^6.24.1",
     "babel-register": "^6.26.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "gh-pages": "^3.2.3",
     "source-map-loader": "^0.2.4",
     "ts-loader": "^8.1.0",
     "typescript": "4.2.3",
